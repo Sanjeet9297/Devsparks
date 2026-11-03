@@ -143,27 +143,40 @@ h1, h2, h3, h4, .font-heading {
   animation: orbit 36s linear infinite;
 }
 
-.animate-float-slow {
-  animation: float 5s ease-in-out infinite;
-}
-
-.animate-float-delay-1 {
-  animation: float-reverse 6s ease-in-out infinite -2s;
-}
-
-.animate-float-delay-2 {
-  animation: float 5.5s ease-in-out infinite -3s;
-}
-
-.animate-pulse-glow {
-  animation: pulse-glow 5s ease-in-out infinite;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
+@keyframes d-core-float {
+  0% {
+    transform: translateY(0px) rotate(-6deg) scale(1);
+    box-shadow: 0 0 60px rgba(120, 134, 255, 0.45), 0 0 30px rgba(83, 245, 220, 0.3);
   }
+  25% {
+    transform: translateY(-16px) rotate(-2deg) scale(1.03);
+    box-shadow: 0 0 95px rgba(120, 134, 255, 0.65), 0 0 45px rgba(83, 245, 220, 0.45);
+  }
+  50% {
+    transform: translateY(-6px) rotate(-10deg) scale(0.97);
+    box-shadow: 0 0 75px rgba(120, 134, 255, 0.5), 0 0 35px rgba(83, 245, 220, 0.35);
+  }
+  75% {
+    transform: translateY(12px) rotate(-3deg) scale(1.02);
+    box-shadow: 0 0 90px rgba(120, 134, 255, 0.6), 0 0 40px rgba(83, 245, 220, 0.4);
+  }
+  100% {
+    transform: translateY(0px) rotate(-6deg) scale(1);
+    box-shadow: 0 0 60px rgba(120, 134, 255, 0.45), 0 0 30px rgba(83, 245, 220, 0.3);
+  }
+}
+
+/* Custom smooth float animation */
+@keyframes d-float-bounce {
+  0%, 100% {
+    transform: translateY(-18px) rotate(-8deg);
+  }
+  50% {
+    transform: translateY(18px) rotate(4deg);
+  }
+}
+
+.animate-d-core {
+  animation: d-float-bounce 3.2s ease-in-out infinite;
+  will-change: transform;
 }

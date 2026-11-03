@@ -3,6 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import { ArrowUpRight, ArrowDown, Sparkles, Command } from "lucide-react";
+import { motion } from "framer-motion";
 import Container from "@/components/ui/Container";
 
 export default function Hero() {
@@ -112,39 +113,63 @@ export default function Hero() {
                 className="absolute w-3 h-3 rounded-full bg-[#53f5dc] shadow-[0_0_20px_#53f5dc] -top-2 right-[20%] z-20 pointer-events-none"
               />
 
-              {/* Central Glowing Core "D" */}
-              <div className="relative z-10 w-28 h-28 sm:w-36 sm:h-36 rounded-[28px] sm:rounded-[36px] bg-gradient-to-br from-[#7886ff] to-[#53f5dc] flex items-center justify-center shadow-[0_0_80px_rgba(120,134,255,0.45)] -rotate-6 animate-float-slow select-none">
-                <span className="font-heading font-black text-5xl sm:text-6xl text-[#071018] rotate-6">
+              {/* Central Glowing Core "D" - Animated Up & Down Motion */}
+              <motion.div
+                animate={{
+                  y: [-20, 20, -20],
+                  rotate: [-8, 4, -8],
+                }}
+                transition={{
+                  duration: 3.2,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+                whileHover={{ scale: 1.08 }}
+                className="relative z-10 w-28 h-28 sm:w-36 sm:h-36 rounded-[28px] sm:rounded-[36px] bg-gradient-to-br from-[#7886ff] to-[#53f5dc] flex items-center justify-center shadow-[0_0_80px_rgba(120,134,255,0.55)] select-none cursor-pointer"
+              >
+                <span className="font-heading font-black text-5xl sm:text-6xl text-[#071018]">
                   D
                 </span>
-              </div>
+              </motion.div>
 
               {/* Floating Glass Card 1 (Top Left) */}
-              <div className="absolute -top-2 left-0 sm:-left-4 z-20 px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-2xl bg-[#11182b]/85 border border-white/[0.12] backdrop-blur-md shadow-2xl animate-float-slow pointer-events-none max-w-[170px] sm:max-w-[190px]">
+              <motion.div
+                animate={{ y: [-10, 10, -10] }}
+                transition={{ duration: 3.8, repeat: Infinity, ease: "easeInOut" }}
+                className="absolute -top-2 left-0 sm:-left-4 z-20 px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-2xl bg-[#11182b]/85 border border-white/[0.12] backdrop-blur-md shadow-2xl pointer-events-none max-w-[170px] sm:max-w-[190px]"
+              >
                 <div className="flex items-center gap-1.5 text-[#53f5dc] text-xs font-semibold mb-0.5">
                   <Sparkles className="w-3.5 h-3.5" />
                   <span className="font-bold text-[#f5f7ff]">Creative by design</span>
                 </div>
                 <p className="text-[10px] sm:text-[11px] text-[#a3adc8]">Made for people</p>
-              </div>
+              </motion.div>
 
               {/* Floating Glass Card 2 (Bottom Right) */}
-              <div className="absolute bottom-4 right-0 sm:-right-4 z-20 px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-2xl bg-[#11182b]/85 border border-white/[0.12] backdrop-blur-md shadow-2xl animate-float-delay-1 pointer-events-none max-w-[170px] sm:max-w-[190px]">
+              <motion.div
+                animate={{ y: [10, -10, 10] }}
+                transition={{ duration: 4.4, repeat: Infinity, ease: "easeInOut", delay: 0.3 }}
+                className="absolute bottom-4 right-0 sm:-right-4 z-20 px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-2xl bg-[#11182b]/85 border border-white/[0.12] backdrop-blur-md shadow-2xl pointer-events-none max-w-[170px] sm:max-w-[190px]"
+              >
                 <div className="flex items-center gap-1.5 text-[#7886ff] text-xs font-semibold mb-0.5">
                   <Command className="w-3.5 h-3.5" />
                   <span className="font-bold text-[#f5f7ff]">Code with purpose</span>
                 </div>
                 <p className="text-[10px] sm:text-[11px] text-[#a3adc8]">Ready to scale</p>
-              </div>
+              </motion.div>
 
               {/* Floating Glass Card 3 (Bottom Left) */}
-              <div className="absolute -bottom-4 left-4 sm:left-2 z-20 px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-2xl bg-[#11182b]/85 border border-white/[0.12] backdrop-blur-md shadow-2xl animate-float-delay-2 pointer-events-none max-w-[170px] sm:max-w-[190px]">
+              <motion.div
+                animate={{ y: [-8, 12, -8] }}
+                transition={{ duration: 3.6, repeat: Infinity, ease: "easeInOut", delay: 0.7 }}
+                className="absolute -bottom-4 left-4 sm:left-2 z-20 px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-2xl bg-[#11182b]/85 border border-white/[0.12] backdrop-blur-md shadow-2xl pointer-events-none max-w-[170px] sm:max-w-[190px]"
+              >
                 <div className="flex items-center gap-1.5 text-[#bd8cff] text-xs font-semibold mb-0.5">
                   <ArrowUpRight className="w-3.5 h-3.5" />
                   <span className="font-bold text-[#f5f7ff]">Ideas → impact</span>
                 </div>
                 <p className="text-[10px] sm:text-[11px] text-[#a3adc8]">One step at a time</p>
-              </div>
+              </motion.div>
             </div>
           </div>
         </div>
