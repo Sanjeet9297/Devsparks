@@ -86,7 +86,7 @@ export default function Hero() {
             >
               {/* Outer Orbit Ring */}
               <div
-                className="absolute w-[290px] sm:w-[400px] h-[290px] sm:h-[400px] rounded-full border border-[#53f5dc]/30 animate-orbit-2 pointer-events-none"
+                className="absolute w-[290px] sm:w-[400px] h-[290px] sm:h-[400px] rounded-full border border-[#53f5dc]/30 [html.light_&]:border-teal-600/70 [html.light_&]:border-[2px] [html.light_&]:shadow-[0_0_20px_rgba(13,148,136,0.25)] animate-orbit-2 pointer-events-none"
                 style={{
                   transformStyle: "preserve-3d",
                 }}
@@ -94,7 +94,7 @@ export default function Hero() {
 
               {/* Middle Orbit Ring */}
               <div
-                className="absolute w-[230px] sm:w-[320px] h-[230px] sm:h-[320px] rounded-full border border-[#7886ff]/45 animate-orbit-1 pointer-events-none"
+                className="absolute w-[230px] sm:w-[320px] h-[230px] sm:h-[320px] rounded-full border border-[#7886ff]/45 [html.light_&]:border-indigo-600/70 [html.light_&]:border-[2px] [html.light_&]:shadow-[0_0_20px_rgba(79,70,229,0.25)] animate-orbit-1 pointer-events-none"
                 style={{
                   transformStyle: "preserve-3d",
                 }}
@@ -102,7 +102,7 @@ export default function Hero() {
 
               {/* Inner Dashed Orbit Ring */}
               <div
-                className="absolute w-[170px] sm:w-[240px] h-[170px] sm:h-[240px] rounded-full border border-dashed border-[#bd8cff]/40 animate-orbit-3 pointer-events-none"
+                className="absolute w-[170px] sm:w-[240px] h-[170px] sm:h-[240px] rounded-full border border-dashed border-[#bd8cff]/40 [html.light_&]:border-purple-600/70 [html.light_&]:border-[2px] animate-orbit-3 pointer-events-none"
                 style={{
                   transformStyle: "preserve-3d",
                 }}
@@ -136,39 +136,39 @@ export default function Hero() {
               <motion.div
                 animate={{ y: [-10, 10, -10] }}
                 transition={{ duration: 3.8, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute -top-2 left-0 sm:-left-4 z-20 px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-2xl bg-[#11182b]/85 border border-white/[0.12] backdrop-blur-md shadow-2xl pointer-events-none max-w-[170px] sm:max-w-[190px]"
+                className="absolute -top-2 left-0 sm:-left-4 z-20 px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-2xl bg-[#11182b]/85 [html.light_&]:bg-white/95 border border-white/[0.12] [html.light_&]:border-slate-200/90 [html.light_&]:shadow-xl [html.light_&]:shadow-slate-200/60 backdrop-blur-md shadow-2xl pointer-events-none max-w-[170px] sm:max-w-[190px]"
               >
-                <div className="flex items-center gap-1.5 text-[#53f5dc] text-xs font-semibold mb-0.5">
+                <div className="flex items-center gap-1.5 text-[#53f5dc] [html.light_&]:text-teal-600 text-xs font-semibold mb-0.5">
                   <Sparkles className="w-3.5 h-3.5" />
-                  <span className="font-bold text-[#f5f7ff]">Creative by design</span>
+                  <span className="font-bold text-[#f5f7ff] [html.light_&]:text-[#0f172a]">Creative by design</span>
                 </div>
-                <p className="text-[10px] sm:text-[11px] text-[#a3adc8]">Made for people</p>
+                <p className="text-[10px] sm:text-[11px] text-[#a3adc8] [html.light_&]:text-slate-600">Made for people</p>
               </motion.div>
 
               {/* Floating Glass Card 2 (Bottom Right) */}
               <motion.div
                 animate={{ y: [10, -10, 10] }}
                 transition={{ duration: 4.4, repeat: Infinity, ease: "easeInOut", delay: 0.3 }}
-                className="absolute bottom-4 right-0 sm:-right-4 z-20 px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-2xl bg-[#11182b]/85 border border-white/[0.12] backdrop-blur-md shadow-2xl pointer-events-none max-w-[170px] sm:max-w-[190px]"
+                className="absolute bottom-4 right-0 sm:-right-4 z-20 px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-2xl bg-[#11182b]/85 [html.light_&]:bg-white/95 border border-white/[0.12] [html.light_&]:border-slate-200/90 [html.light_&]:shadow-xl [html.light_&]:shadow-slate-200/60 backdrop-blur-md shadow-2xl pointer-events-none max-w-[170px] sm:max-w-[190px]"
               >
-                <div className="flex items-center gap-1.5 text-[#7886ff] text-xs font-semibold mb-0.5">
+                <div className="flex items-center gap-1.5 text-[#7886ff] [html.light_&]:text-indigo-600 text-xs font-semibold mb-0.5">
                   <Command className="w-3.5 h-3.5" />
-                  <span className="font-bold text-[#f5f7ff]">Code with purpose</span>
+                  <span className="font-bold text-[#f5f7ff] [html.light_&]:text-[#0f172a]">Code with purpose</span>
                 </div>
-                <p className="text-[10px] sm:text-[11px] text-[#a3adc8]">Ready to scale</p>
+                <p className="text-[10px] sm:text-[11px] text-[#a3adc8] [html.light_&]:text-slate-600">Ready to scale</p>
               </motion.div>
 
               {/* Floating Glass Card 3 (Bottom Left) */}
               <motion.div
                 animate={{ y: [-8, 12, -8] }}
                 transition={{ duration: 3.6, repeat: Infinity, ease: "easeInOut", delay: 0.7 }}
-                className="absolute -bottom-4 left-4 sm:left-2 z-20 px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-2xl bg-[#11182b]/85 border border-white/[0.12] backdrop-blur-md shadow-2xl pointer-events-none max-w-[170px] sm:max-w-[190px]"
+                className="absolute -bottom-4 left-4 sm:left-2 z-20 px-3.5 py-2.5 sm:px-4 sm:py-3 rounded-2xl bg-[#11182b]/85 [html.light_&]:bg-white/95 border border-white/[0.12] [html.light_&]:border-slate-200/90 [html.light_&]:shadow-xl [html.light_&]:shadow-slate-200/60 backdrop-blur-md shadow-2xl pointer-events-none max-w-[170px] sm:max-w-[190px]"
               >
-                <div className="flex items-center gap-1.5 text-[#bd8cff] text-xs font-semibold mb-0.5">
+                <div className="flex items-center gap-1.5 text-[#bd8cff] [html.light_&]:text-purple-600 text-xs font-semibold mb-0.5">
                   <ArrowUpRight className="w-3.5 h-3.5" />
-                  <span className="font-bold text-[#f5f7ff]">Ideas → impact</span>
+                  <span className="font-bold text-[#f5f7ff] [html.light_&]:text-[#0f172a]">Ideas → impact</span>
                 </div>
-                <p className="text-[10px] sm:text-[11px] text-[#a3adc8]">One step at a time</p>
+                <p className="text-[10px] sm:text-[11px] text-[#a3adc8] [html.light_&]:text-slate-600">One step at a time</p>
               </motion.div>
             </div>
           </div>

@@ -60,48 +60,48 @@ export default function ContactCTA() {
   };
 
   return (
-    <section id="contact" className="py-20 md:py-28 border-t border-white/[0.08] relative">
+    <section id="contact" className="py-20 md:py-28 border-t border-white/[0.08] [html.light_&]:border-slate-200/80 relative">
       <Container>
-        <div className="rounded-[28px] border border-[#7886ff]/30 bg-[#0d1222] bg-[radial-gradient(ellipse_at_5%_0%,rgba(120,134,255,0.14),transparent_55%)] shadow-2xl overflow-hidden grid grid-cols-1 lg:grid-cols-12">
+        <div className="rounded-[28px] border border-[#7886ff]/30 [html.light_&]:border-indigo-400/40 bg-[#0d1222] [html.light_&]:bg-white [html.light_&]:shadow-xl [html.light_&]:shadow-slate-200/60 bg-[radial-gradient(ellipse_at_5%_0%,rgba(120,134,255,0.14),transparent_55%)] [html.light_&]:bg-none shadow-2xl overflow-hidden grid grid-cols-1 lg:grid-cols-12">
           {/* Left Column: Studio info */}
           <div className="lg:col-span-5 p-8 sm:p-10 md:p-12 flex flex-col justify-between">
             <div>
-              <span className="text-[#53f5dc] text-[11px] font-extrabold uppercase tracking-[2.1px] block mb-3">
+              <span className="text-[#53f5dc] [html.light_&]:text-teal-700 text-[11px] font-extrabold uppercase tracking-[2.1px] block mb-3">
                 Let&apos;s talk
               </span>
-              <h2 className="text-3xl sm:text-4xl font-bold text-[#f5f7ff] tracking-tight leading-[1.12] mb-4">
+              <h2 className="text-3xl sm:text-4xl font-bold text-[#f5f7ff] [html.light_&]:text-[#0f172a] tracking-tight leading-[1.12] mb-4">
                 Have an idea?
                 <br />
                 <span className="text-gradient">Let&apos;s make it real.</span>
               </h2>
-              <p className="text-xs sm:text-[13px] text-[#a3adc8] leading-relaxed mb-8">
+              <p className="text-xs sm:text-[13px] text-[#a3adc8] [html.light_&]:text-slate-600 leading-relaxed mb-8">
                 Tell us a little about what you&apos;re planning. We can start with a
                 simple conversation and figure out the right next step together.
               </p>
             </div>
 
-            <div className="space-y-5 pt-6 border-t border-white/[0.08]">
+            <div className="space-y-5 pt-6 border-t border-white/[0.08] [html.light_&]:border-slate-200">
               <div>
-                <small className="block text-[10px] text-[#a3adc8] uppercase tracking-[1.4px] font-semibold mb-1">
+                <small className="block text-[10px] text-[#a3adc8] [html.light_&]:text-slate-500 uppercase tracking-[1.4px] font-semibold mb-1">
                   Email (Placeholder — verify before publishing)
                 </small>
                 <a
                   href="mailto:hello@devsparks.in"
-                  className="font-heading font-semibold text-sm sm:text-base text-[#f5f7ff] hover:text-[#53f5dc] transition-colors"
+                  className="font-heading font-semibold text-sm sm:text-base text-[#f5f7ff] [html.light_&]:text-[#0f172a] hover:text-[#53f5dc] [html.light_&]:hover:text-teal-700 transition-colors"
                 >
                   hello@devsparks.in
                 </a>
               </div>
 
               <div>
-                <small className="block text-[10px] text-[#a3adc8] uppercase tracking-[1.4px] font-semibold mb-1">
+                <small className="block text-[10px] text-[#a3adc8] [html.light_&]:text-slate-500 uppercase tracking-[1.4px] font-semibold mb-1">
                   Instagram
                 </small>
                 <a
                   href="https://www.instagram.com/devsparks.in/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-heading font-semibold text-sm sm:text-base text-[#53f5dc] hover:text-[#9ef9e9] transition-colors inline-flex items-center gap-1"
+                  className="font-heading font-semibold text-sm sm:text-base text-[#53f5dc] [html.light_&]:text-teal-600 hover:text-[#9ef9e9] [html.light_&]:hover:text-teal-700 transition-colors inline-flex items-center gap-1"
                 >
                   @devsparks.in
                   <ArrowUpRight className="w-3.5 h-3.5" />
@@ -109,10 +109,10 @@ export default function ContactCTA() {
               </div>
 
               <div>
-                <small className="block text-[10px] text-[#a3adc8] uppercase tracking-[1.4px] font-semibold mb-1">
+                <small className="block text-[10px] text-[#a3adc8] [html.light_&]:text-slate-500 uppercase tracking-[1.4px] font-semibold mb-1">
                   Good for
                 </small>
-                <p className="text-xs sm:text-[13px] text-[#e6ebff] font-medium">
+                <p className="text-xs sm:text-[13px] text-[#e6ebff] [html.light_&]:text-slate-800 font-medium">
                   New projects · Improvements · Collaborations
                 </p>
               </div>
@@ -120,7 +120,7 @@ export default function ContactCTA() {
           </div>
 
           {/* Right Column: Contact Form */}
-          <div className="lg:col-span-7 p-8 sm:p-10 md:p-12 bg-white/[0.02] border-t lg:border-t-0 lg:border-l border-white/[0.08]">
+          <div className="lg:col-span-7 p-8 sm:p-10 md:p-12 bg-white/[0.02] [html.light_&]:bg-slate-50/60 border-t lg:border-t-0 lg:border-l border-white/[0.08] [html.light_&]:border-slate-200">
             {status === "success" ? (
               <div className="h-full flex flex-col items-center justify-center text-center py-12 px-4">
                 <div className="w-14 h-14 rounded-full bg-[#53f5dc]/15 border border-[#53f5dc]/40 flex items-center justify-center text-[#53f5dc] mb-4">
@@ -161,7 +161,7 @@ export default function ContactCTA() {
                   <div>
                     <label
                       htmlFor="name"
-                      className="block text-[11px] font-bold text-[#dce2f7] mb-1.5"
+                      className="block text-[11px] font-bold text-[#dce2f7] [html.light_&]:text-slate-700 mb-1.5"
                     >
                       Your name *
                     </label>
@@ -173,14 +173,14 @@ export default function ContactCTA() {
                       value={formData.name}
                       onChange={handleChange}
                       placeholder="e.g. Alex Sharma"
-                      className="w-full rounded-xl border border-white/[0.12] bg-[#080d1b] px-3.5 py-3 text-xs sm:text-sm text-[#f5f7ff] placeholder:text-[#a3adc8]/40 focus:border-[#53f5dc]/70 focus:outline-none focus:ring-2 focus:ring-[#53f5dc]/15 transition-all"
+                      className="w-full rounded-xl border border-white/[0.12] [html.light_&]:border-slate-300 bg-[#080d1b] [html.light_&]:bg-white px-3.5 py-3 text-xs sm:text-sm text-[#f5f7ff] [html.light_&]:text-[#0f172a] placeholder:text-[#a3adc8]/40 [html.light_&]:placeholder:text-slate-400 focus:border-[#53f5dc]/70 [html.light_&]:focus:border-teal-600 focus:outline-none focus:ring-2 focus:ring-[#53f5dc]/15 [html.light_&]:focus:ring-teal-500/20 transition-all"
                     />
                   </div>
 
                   <div>
                     <label
                       htmlFor="email"
-                      className="block text-[11px] font-bold text-[#dce2f7] mb-1.5"
+                      className="block text-[11px] font-bold text-[#dce2f7] [html.light_&]:text-slate-700 mb-1.5"
                     >
                       Email address *
                     </label>
@@ -192,7 +192,7 @@ export default function ContactCTA() {
                       value={formData.email}
                       onChange={handleChange}
                       placeholder="you@example.com"
-                      className="w-full rounded-xl border border-white/[0.12] bg-[#080d1b] px-3.5 py-3 text-xs sm:text-sm text-[#f5f7ff] placeholder:text-[#a3adc8]/40 focus:border-[#53f5dc]/70 focus:outline-none focus:ring-2 focus:ring-[#53f5dc]/15 transition-all"
+                      className="w-full rounded-xl border border-white/[0.12] [html.light_&]:border-slate-300 bg-[#080d1b] [html.light_&]:bg-white px-3.5 py-3 text-xs sm:text-sm text-[#f5f7ff] [html.light_&]:text-[#0f172a] placeholder:text-[#a3adc8]/40 [html.light_&]:placeholder:text-slate-400 focus:border-[#53f5dc]/70 [html.light_&]:focus:border-teal-600 focus:outline-none focus:ring-2 focus:ring-[#53f5dc]/15 [html.light_&]:focus:ring-teal-500/20 transition-all"
                     />
                   </div>
                 </div>
@@ -200,7 +200,7 @@ export default function ContactCTA() {
                 <div>
                   <label
                     htmlFor="service"
-                    className="block text-[11px] font-bold text-[#dce2f7] mb-1.5"
+                    className="block text-[11px] font-bold text-[#dce2f7] [html.light_&]:text-slate-700 mb-1.5"
                   >
                     What can we help with?
                   </label>
@@ -209,7 +209,7 @@ export default function ContactCTA() {
                     name="service"
                     value={formData.service}
                     onChange={handleChange}
-                    className="w-full rounded-xl border border-white/[0.12] bg-[#080d1b] px-3.5 py-3 text-xs sm:text-sm text-[#f5f7ff] focus:border-[#53f5dc]/70 focus:outline-none focus:ring-2 focus:ring-[#53f5dc]/15 transition-all"
+                    className="w-full rounded-xl border border-white/[0.12] [html.light_&]:border-slate-300 bg-[#080d1b] [html.light_&]:bg-white px-3.5 py-3 text-xs sm:text-sm text-[#f5f7ff] [html.light_&]:text-[#0f172a] focus:border-[#53f5dc]/70 [html.light_&]:focus:border-teal-600 focus:outline-none focus:ring-2 focus:ring-[#53f5dc]/15 [html.light_&]:focus:ring-teal-500/20 transition-all"
                   >
                     <option value="Website design & development">Website design & development</option>
                     <option value="Mobile app development">Mobile app development</option>
@@ -224,7 +224,7 @@ export default function ContactCTA() {
                 <div>
                   <label
                     htmlFor="message"
-                    className="block text-[11px] font-bold text-[#dce2f7] mb-1.5"
+                    className="block text-[11px] font-bold text-[#dce2f7] [html.light_&]:text-slate-700 mb-1.5"
                   >
                     Tell us about your idea *
                   </label>
@@ -236,7 +236,7 @@ export default function ContactCTA() {
                     value={formData.message}
                     onChange={handleChange}
                     placeholder="A little about the project, goals and timeline..."
-                    className="w-full rounded-xl border border-white/[0.12] bg-[#080d1b] px-3.5 py-3 text-xs sm:text-sm text-[#f5f7ff] placeholder:text-[#a3adc8]/40 focus:border-[#53f5dc]/70 focus:outline-none focus:ring-2 focus:ring-[#53f5dc]/15 transition-all resize-y min-h-[110px]"
+                    className="w-full rounded-xl border border-white/[0.12] [html.light_&]:border-slate-300 bg-[#080d1b] [html.light_&]:bg-white px-3.5 py-3 text-xs sm:text-sm text-[#f5f7ff] [html.light_&]:text-[#0f172a] placeholder:text-[#a3adc8]/40 [html.light_&]:placeholder:text-slate-400 focus:border-[#53f5dc]/70 [html.light_&]:focus:border-teal-600 focus:outline-none focus:ring-2 focus:ring-[#53f5dc]/15 [html.light_&]:focus:ring-teal-500/20 transition-all resize-y min-h-[110px]"
                   />
                 </div>
 

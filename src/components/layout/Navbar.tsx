@@ -5,6 +5,7 @@ import Link from "next/link";
 import { ArrowUpRight, Menu, X } from "lucide-react";
 import Container from "@/components/ui/Container";
 import MobileMenu from "@/components/layout/MobileMenu";
+import ThemeToggle from "@/components/ui/ThemeToggle";
 
 const navLinks = [
   { label: "Home", href: "/#home" },
@@ -95,8 +96,8 @@ export default function Navbar() {
               })}
             </nav>
 
-            {/* Desktop CTA & Mobile Toggle */}
-            <div className="flex items-center gap-3">
+            {/* Desktop CTA, Theme Toggle & Mobile Toggle */}
+            <div className="flex items-center gap-2.5 sm:gap-3">
               <Link
                 href="/#contact"
                 className="hidden sm:inline-flex items-center gap-1.5 rounded-xl bg-gradient-to-r from-[#53f5dc] to-[#9ef9e9] px-4.5 py-2 text-xs sm:text-[13px] font-bold text-[#071018] shadow-[0_10px_25px_rgba(83,245,220,0.2)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_12px_30px_rgba(83,245,220,0.3)]"
@@ -104,6 +105,8 @@ export default function Navbar() {
                 Let&apos;s talk
                 <ArrowUpRight className="w-3.5 h-3.5" />
               </Link>
+
+              <ThemeToggle />
 
               <button
                 type="button"

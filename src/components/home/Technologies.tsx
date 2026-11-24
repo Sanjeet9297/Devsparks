@@ -23,15 +23,15 @@ export default function Technologies() {
           {whyDevSparksData.map((item, idx) => (
             <div
               key={idx}
-              className="p-6 rounded-2xl bg-white/[0.03] border border-white/[0.09] transition-all duration-300 hover:bg-white/[0.05] hover:border-white/[0.16] hover:-translate-y-1"
+              className="p-6 rounded-2xl bg-white/[0.03] [html.light_&]:bg-white [html.light_&]:shadow-md [html.light_&]:shadow-slate-200/40 border border-white/[0.09] [html.light_&]:border-slate-200/90 transition-all duration-300 hover:bg-white/[0.05] [html.light_&]:hover:shadow-lg hover:border-white/[0.16] hover:-translate-y-1"
             >
               <div className="flex items-center gap-2.5 mb-2.5">
                 <span className="text-lg">{item.icon}</span>
-                <h3 className="font-heading font-semibold text-base sm:text-lg text-[#f5f7ff]">
+                <h3 className="font-heading font-semibold text-base sm:text-lg text-[#f5f7ff] [html.light_&]:text-[#0f172a]">
                   {item.title}
                 </h3>
               </div>
-              <p className="text-xs sm:text-[13px] text-[#a3adc8] leading-relaxed">
+              <p className="text-xs sm:text-[13px] text-[#a3adc8] [html.light_&]:text-slate-600 leading-relaxed">
                 {item.description}
               </p>
             </div>
@@ -39,15 +39,15 @@ export default function Technologies() {
         </div>
 
         {/* Modern Tech Foundation Pill Ribbon */}
-        <div className="text-center pt-8 border-t border-white/[0.06]">
-          <span className="text-xs uppercase tracking-wider text-[#a3adc8] block mb-4">
+        <div className="text-center pt-8 border-t border-white/[0.06] [html.light_&]:border-slate-200">
+          <span className="text-xs uppercase tracking-wider text-[#a3adc8] [html.light_&]:text-slate-500 font-semibold block mb-4">
             Engineered with modern, battle-tested technologies
           </span>
           <div className="flex flex-wrap items-center justify-center gap-2.5">
             {coreTechnologies.map((tech) => (
               <span
                 key={tech}
-                className="px-3.5 py-1.5 rounded-full text-xs font-medium text-[#f5f7ff]/90 bg-[#101629] border border-white/[0.08]"
+                className="px-3.5 py-1.5 rounded-full text-xs font-semibold text-[#f5f7ff]/90 [html.light_&]:text-[#0f172a] bg-[#101629] [html.light_&]:bg-white border border-white/[0.08] [html.light_&]:border-slate-200/90 [html.light_&]:shadow-sm transition-colors"
               >
                 {tech}
               </span>

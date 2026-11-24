@@ -180,3 +180,356 @@ h1, h2, h3, h4, .font-heading {
   animation: d-float-bounce 3.2s ease-in-out infinite;
   will-change: transform;
 }
+
+/* =========================================================
+   LIGHT THEME OVERRIDES
+   ========================================================= */
+html.light,
+html.light body,
+html[data-theme="light"],
+html[data-theme="light"] body,
+body.light {
+  background-color: #f8fafc !important;
+  color: #0f172a !important;
+}
+
+html.light body::before,
+body.light::before {
+  background: 
+    radial-gradient(ellipse 60% 50% at 15% 10%, rgba(99, 102, 241, 0.08), transparent 60%),
+    radial-gradient(ellipse 55% 45% at 85% 40%, rgba(13, 148, 136, 0.07), transparent 55%),
+    radial-gradient(ellipse 50% 40% at 50% 80%, rgba(168, 85, 247, 0.05), transparent 50%) !important;
+}
+
+/* Headings & Texts */
+html.light h1,
+html.light h2,
+html.light h3,
+html.light h4,
+html.light strong,
+html.light b,
+html.light .text-\[\#f5f7ff\],
+html.light .text-\[\#e6ebff\],
+html.light .text-\[\#dce2f7\] {
+  color: #0f172a !important;
+}
+
+html.light p,
+html.light small,
+html.light .text-\[\#a3adc8\],
+html.light .text-\[\#cbd4f1\] {
+  color: #475569 !important;
+}
+
+/* Header */
+html.light header {
+  background-color: rgba(248, 250, 252, 0.9) !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03) !important;
+}
+
+html.light header nav a {
+  color: #475569 !important;
+}
+
+html.light header nav a:hover,
+html.light header nav a.active {
+  color: #0d9488 !important;
+}
+
+/* Section dividers */
+html.light section {
+  border-top-color: rgba(0, 0, 0, 0.08) !important;
+}
+
+/* =========================================================
+   HERO ORBIT LINES (SHARP & VISIBLE BEHIND "D")
+   ========================================================= */
+html.light .animate-orbit-1 {
+  border: 1.5px solid rgba(79, 70, 229, 0.65) !important; /* Bold Royal Indigo */
+  box-shadow: 0 0 20px rgba(79, 70, 229, 0.15) !important;
+}
+
+html.light .animate-orbit-2 {
+  border: 1.5px solid rgba(13, 148, 136, 0.7) !important; /* Vivid Teal */
+  box-shadow: 0 0 20px rgba(13, 148, 136, 0.15) !important;
+}
+
+html.light .animate-orbit-3 {
+  border: 1.5px dashed rgba(147, 51, 234, 0.6) !important; /* Sharp Purple */
+}
+
+html.light #home .animate-pulse-glow {
+  background-color: rgba(99, 102, 241, 0.15) !important;
+}
+
+/* Hero Floating Glass Cards */
+html.light #home [class*="backdrop-blur"],
+html.light #home .rounded-2xl {
+  background: rgba(255, 255, 255, 0.95) !important;
+  background-image: none !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08) !important;
+}
+
+html.light #home .rounded-2xl span {
+  color: #0f172a !important;
+}
+
+html.light #home .rounded-2xl p {
+  color: #64748b !important;
+}
+
+html.light #home a.rounded-xl.bg-white\/\[0\.04\] {
+  background: #ffffff !important;
+  border: 1px solid rgba(0, 0, 0, 0.12) !important;
+  color: #0f172a !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04) !important;
+}
+
+/* =========================================================
+   CARDS ACROSS ALL SECTIONS (CLEAN WHITE & CRISP)
+   ========================================================= */
+/* Services Section Cards */
+html.light #services .rounded-2xl {
+  background: #ffffff !important;
+  background-image: none !important;
+  border: 1px solid rgba(0, 0, 0, 0.09) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04), 0 1px 3px rgba(0, 0, 0, 0.02) !important;
+}
+
+html.light #services .rounded-2xl:hover {
+  border-color: rgba(13, 148, 136, 0.45) !important;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08) !important;
+}
+
+html.light #services .rounded-2xl h3 {
+  color: #0f172a !important;
+}
+
+html.light #services .rounded-2xl p {
+  color: #64748b !important;
+}
+
+html.light #services .w-12.h-12 {
+  background: #f1f5f9 !important;
+  background-image: none !important;
+  border: 1px solid rgba(0, 0, 0, 0.08) !important;
+}
+
+/* About Section */
+html.light #about .rounded-3xl {
+  background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%) !important;
+  background-image: none !important;
+  border: 1px solid rgba(0, 0, 0, 0.09) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05) !important;
+}
+
+html.light #about .rounded-3xl .rounded-full {
+  border-color: rgba(99, 102, 241, 0.3) !important;
+}
+
+html.light #about .rounded-2xl {
+  background: #ffffff !important;
+  background-image: none !important;
+  border: 1px solid rgba(0, 0, 0, 0.09) !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05) !important;
+}
+
+html.light #about .grid.grid-cols-2 {
+  background: #ffffff !important;
+  border-color: rgba(0, 0, 0, 0.08) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04) !important;
+}
+
+html.light #about .grid.grid-cols-2 > div {
+  border-color: rgba(0, 0, 0, 0.08) !important;
+}
+
+html.light #about .grid.grid-cols-2 span:first-child {
+  color: #0f172a !important;
+}
+
+/* Work / Portfolio Section Cards */
+html.light #work .rounded-2xl {
+  background: #ffffff !important;
+  background-image: none !important;
+  border: 1px solid rgba(0, 0, 0, 0.09) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04) !important;
+}
+
+html.light #work [class*="h-40"],
+html.light #work [class*="h-44"],
+html.light #work .rounded-xl {
+  background: linear-gradient(135deg, #f1f5f9, #e2e8f0) !important;
+  background-image: none !important;
+  border: 1px solid rgba(0, 0, 0, 0.08) !important;
+}
+
+html.light #work [class*="h-40"] span,
+html.light #work [class*="h-44"] span {
+  color: #0f172a !important;
+}
+
+html.light #work [class*="h-40"] div,
+html.light #work [class*="h-44"] div {
+  border-color: rgba(99, 102, 241, 0.35) !important;
+}
+
+html.light #work .rounded-full {
+  background-color: #f1f5f9 !important;
+  border-color: rgba(0, 0, 0, 0.08) !important;
+  color: #334155 !important;
+}
+
+/* Process Section */
+html.light #process .rounded-2xl {
+  background: #ffffff !important;
+  background-image: none !important;
+  border-top: 2px solid #0d9488 !important;
+  border-left: 1px solid rgba(0, 0, 0, 0.08) !important;
+  border-right: 1px solid rgba(0, 0, 0, 0.08) !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04) !important;
+}
+
+html.light #process .rounded-2xl span {
+  color: #0d9488 !important;
+}
+
+html.light #process .rounded-2xl h3 {
+  color: #0f172a !important;
+}
+
+html.light #process .rounded-2xl p {
+  color: #64748b !important;
+}
+
+/* Why DevSparks Section */
+html.light #process + section .rounded-2xl {
+  background: #ffffff !important;
+  background-image: none !important;
+  border: 1px solid rgba(0, 0, 0, 0.08) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04) !important;
+}
+
+html.light #process + section .rounded-2xl h3 {
+  color: #0f172a !important;
+}
+
+html.light #process + section .rounded-2xl p {
+  color: #64748b !important;
+}
+
+html.light #process + section .rounded-full {
+  background-color: #ffffff !important;
+  border: 1px solid rgba(0, 0, 0, 0.09) !important;
+  color: #334155 !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03) !important;
+}
+
+/* FAQ Section */
+html.light #faq button {
+  color: #0f172a !important;
+}
+
+html.light #faq button:hover {
+  color: #0d9488 !important;
+}
+
+html.light #faq p {
+  color: #64748b !important;
+}
+
+html.light #faq [class*="divide-white"] > * {
+  border-color: rgba(0, 0, 0, 0.08) !important;
+}
+
+html.light #faq span.rounded-full {
+  border-color: rgba(0, 0, 0, 0.12) !important;
+  color: #0d9488 !important;
+}
+
+/* Contact Section */
+html.light #contact .rounded-\[28px\] {
+  background: #ffffff !important;
+  background-image: none !important;
+  border: 1px solid rgba(99, 102, 241, 0.25) !important;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.06) !important;
+}
+
+html.light #contact h2 {
+  color: #0f172a !important;
+}
+
+html.light #contact p,
+html.light #contact small {
+  color: #64748b !important;
+}
+
+html.light #contact a {
+  color: #0f172a !important;
+}
+
+html.light #contact a:hover {
+  color: #0d9488 !important;
+}
+
+html.light #contact label {
+  color: #334155 !important;
+}
+
+html.light #contact input,
+html.light #contact textarea,
+html.light #contact select {
+  background-color: #f8fafc !important;
+  border: 1px solid rgba(0, 0, 0, 0.14) !important;
+  color: #0f172a !important;
+}
+
+html.light #contact input:focus,
+html.light #contact textarea:focus,
+html.light #contact select:focus {
+  border-color: #0d9488 !important;
+  box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.15) !important;
+}
+
+html.light #contact .border-t.lg\:border-l {
+  border-color: rgba(0, 0, 0, 0.08) !important;
+  background-color: #fafafa !important;
+}
+
+/* Gradient Headings */
+html.light .text-gradient {
+  background: linear-gradient(100deg, #3b82f6 0%, #0d9488 48%, #7c3aed 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+}
+
+/* Footer */
+html.light footer {
+  background-color: #f1f5f9 !important;
+  border-top: 1px solid rgba(0, 0, 0, 0.08) !important;
+}
+
+html.light footer a {
+  color: #475569 !important;
+}
+
+html.light footer a:hover {
+  color: #0f766e !important;
+}
+
+html.light footer span {
+  color: #64748b !important;
+}
+
+/* Theme toggle button styling in light mode */
+html.light button[title*="mode"],
+html.light button[title*="theme"],
+html.light button[aria-label*="theme"] {
+  background-color: rgba(0, 0, 0, 0.05) !important;
+  border-color: rgba(0, 0, 0, 0.12) !important;
+  color: #0f172a !important;
+}

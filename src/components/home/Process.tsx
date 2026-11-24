@@ -23,20 +23,20 @@ export default function Process() {
           {processData.map((item) => (
             <div
               key={item.step}
-              className="p-6 sm:p-7 rounded-2xl bg-white/[0.02] border-t-2 border-t-[#53f5dc] border-x border-b border-white/[0.08] transition-all duration-300 hover:-translate-y-1 hover:border-t-[#9ef9e9] hover:bg-white/[0.04]"
+              className="p-6 sm:p-7 rounded-2xl bg-white/[0.02] [html.light_&]:bg-white [html.light_&]:shadow-md [html.light_&]:shadow-slate-200/40 border-t-2 border-t-[#53f5dc] [html.light_&]:border-t-teal-600 border-x border-b border-white/[0.08] [html.light_&]:border-slate-200/90 transition-all duration-300 hover:-translate-y-1 hover:border-t-[#9ef9e9] hover:bg-white/[0.04] [html.light_&]:hover:shadow-lg"
             >
               {/* Step indicator */}
-              <span className="font-heading text-xs font-bold text-[#53f5dc] tracking-wider block mb-3.5">
+              <span className="font-heading text-xs font-bold text-[#53f5dc] [html.light_&]:text-teal-700 tracking-wider block mb-3.5">
                 STEP {item.step} / {item.phase}
               </span>
 
               {/* Title */}
-              <h3 className="font-heading text-lg font-bold text-[#f5f7ff] tracking-tight mb-2.5">
+              <h3 className="font-heading text-lg font-bold text-[#f5f7ff] [html.light_&]:text-[#0f172a] tracking-tight mb-2.5">
                 {item.title}
               </h3>
 
               {/* Description */}
-              <p className="text-xs sm:text-[13px] text-[#a3adc8] leading-relaxed">
+              <p className="text-xs sm:text-[13px] text-[#a3adc8] [html.light_&]:text-slate-600 leading-relaxed">
                 {item.description}
               </p>
             </div>

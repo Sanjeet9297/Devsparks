@@ -24,35 +24,35 @@ export default function AboutPreview() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           {/* Left Column: Abstract Emblem & Floating Mini-Stats */}
           <div className="lg:col-span-5 order-2 lg:order-1">
-            <div className="relative min-h-[340px] sm:min-h-[400px] rounded-3xl border border-white/[0.1] bg-gradient-to-br from-[#141b30] to-[#0b1020] flex items-center justify-center overflow-hidden shadow-2xl">
+            <div className="relative min-h-[340px] sm:min-h-[400px] rounded-3xl border border-white/[0.1] [html.light_&]:border-slate-200/90 bg-gradient-to-br from-[#141b30] to-[#0b1020] [html.light_&]:from-[#ffffff] [html.light_&]:to-[#f1f5f9] flex items-center justify-center overflow-hidden shadow-2xl [html.light_&]:shadow-xl [html.light_&]:shadow-slate-200/60">
               {/* Radial glow background */}
-              <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_45%,rgba(102,117,255,0.18),transparent_60%)] pointer-events-none" />
+              <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_45%,rgba(102,117,255,0.18),transparent_60%)] [html.light_&]:bg-[radial-gradient(ellipse_at_50%_45%,rgba(99,102,241,0.08),transparent_60%)] pointer-events-none" />
 
               {/* Concentric rings */}
-              <div className="absolute w-[280px] h-[280px] rounded-full border border-[#53f5dc]/20 pointer-events-none" />
-              <div className="absolute w-[210px] h-[210px] rounded-full border border-[#9e8cff]/30 pointer-events-none" />
+              <div className="absolute w-[280px] h-[280px] rounded-full border border-[#53f5dc]/20 [html.light_&]:border-teal-500/40 pointer-events-none" />
+              <div className="absolute w-[210px] h-[210px] rounded-full border border-[#9e8cff]/30 [html.light_&]:border-indigo-500/40 pointer-events-none" />
 
               {/* Center Emblem */}
-              <div className="relative z-10 w-28 h-28 rounded-3xl bg-gradient-to-br from-[#7886ff] to-[#53f5dc] flex items-center justify-center -rotate-6 shadow-[0_0_60px_rgba(120,134,255,0.4)]">
+              <div className="relative z-10 w-28 h-28 rounded-3xl bg-gradient-to-br from-[#7886ff] to-[#53f5dc] flex items-center justify-center -rotate-6 shadow-[0_0_60px_rgba(120,134,255,0.4)] [html.light_&]:shadow-[0_10px_35px_rgba(99,102,241,0.35)]">
                 <span className="font-heading font-black text-4xl sm:text-5xl text-[#071018] flex items-center">
                   D<span className="text-[#f7fbff] text-2xl ml-0.5">✦</span>
                 </span>
               </div>
 
               {/* Mini Stat 1 (Top Left) */}
-              <div className="absolute top-5 left-5 z-20 px-3.5 py-2.5 rounded-2xl bg-[#11182b]/90 border border-white/[0.12] backdrop-blur-md shadow-lg">
-                <span className="font-heading font-bold text-sm text-[#f5f7ff] block">
+              <div className="absolute top-5 left-5 z-20 px-3.5 py-2.5 rounded-2xl bg-[#11182b]/90 [html.light_&]:bg-white/95 border border-white/[0.12] [html.light_&]:border-slate-200/90 [html.light_&]:shadow-md backdrop-blur-md shadow-lg">
+                <span className="font-heading font-bold text-sm text-[#f5f7ff] [html.light_&]:text-[#0f172a] block">
                   Design + code
                 </span>
-                <span className="text-[11px] text-[#a3adc8]">One focused team</span>
+                <span className="text-[11px] text-[#a3adc8] [html.light_&]:text-slate-500">One focused team</span>
               </div>
 
               {/* Mini Stat 2 (Bottom Right) */}
-              <div className="absolute bottom-5 right-5 z-20 px-3.5 py-2.5 rounded-2xl bg-[#11182b]/90 border border-white/[0.12] backdrop-blur-md shadow-lg text-right">
-                <span className="font-heading font-bold text-sm text-[#f5f7ff] block">
+              <div className="absolute bottom-5 right-5 z-20 px-3.5 py-2.5 rounded-2xl bg-[#11182b]/90 [html.light_&]:bg-white/95 border border-white/[0.12] [html.light_&]:border-slate-200/90 [html.light_&]:shadow-md backdrop-blur-md shadow-lg text-right">
+                <span className="font-heading font-bold text-sm text-[#f5f7ff] [html.light_&]:text-[#0f172a] block">
                   Built around you
                 </span>
-                <span className="text-[11px] text-[#a3adc8]">Not one-size-fits-all</span>
+                <span className="text-[11px] text-[#a3adc8] [html.light_&]:text-slate-500">Not one-size-fits-all</span>
               </div>
             </div>
           </div>
@@ -103,13 +103,13 @@ export default function AboutPreview() {
         </div>
 
         {/* Bottom 4 Highlight Cards */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 border border-white/[0.09] rounded-2xl mt-14 bg-white/[0.02] divide-y lg:divide-y-0 divide-x-0 sm:divide-x divide-white/[0.09] overflow-hidden">
+        <div className="grid grid-cols-2 lg:grid-cols-4 border border-white/[0.09] [html.light_&]:border-slate-200 [html.light_&]:bg-white [html.light_&]:shadow-md rounded-2xl mt-14 bg-white/[0.02] divide-y lg:divide-y-0 divide-x-0 sm:divide-x divide-white/[0.09] [html.light_&]:divide-slate-200 overflow-hidden">
           {stats.map((stat, idx) => (
             <div key={idx} className="p-5 sm:p-6 text-center">
-              <span className="font-heading font-bold text-2xl sm:text-3xl text-[#f5f7ff] tracking-tight block mb-1">
+              <span className="font-heading font-bold text-2xl sm:text-3xl text-[#f5f7ff] [html.light_&]:text-[#0f172a] tracking-tight block mb-1">
                 {stat.value}
               </span>
-              <span className="text-[11px] sm:text-xs text-[#a3adc8]">
+              <span className="text-[11px] sm:text-xs text-[#a3adc8] [html.light_&]:text-slate-600">
                 {stat.label}
               </span>
             </div>

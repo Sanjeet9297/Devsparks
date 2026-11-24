@@ -57,9 +57,23 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      suppressHydrationWarning
       className={`${spaceGrotesk.variable} ${dmSans.variable} scroll-smooth`}
     >
-      <body className="min-h-screen flex flex-col bg-[#080b16] text-[#f5f7ff] antialiased selection:bg-[#53f5dc] selection:text-[#080b16]">
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              try {
+                if (localStorage.getItem('devsparks-theme') === 'light') {
+                  document.documentElement.classList.add('light');
+                }
+              } catch (_) {}
+            `,
+          }}
+        />
+      </head>
+      <body className="min-h-screen flex flex-col bg-[var(--bg)] text-[var(--ink)] antialiased selection:bg-[#53f5dc] selection:text-[#080b16] transition-colors duration-300">
         <div className="topline-glow w-full shrink-0" />
         <Navbar />
         <main className="flex-1 w-full">{children}</main>
